@@ -1,0 +1,15 @@
+# Define your schema here
+
+table Usuarios {
+  id        Int       @id  @default(autoincrement())
+  name      String
+  email     String    @unique
+  age       Int
+  created   DateTime  @default(now())
+  updated   DateTime  @updatedAt
+}
+
+table GPS {
+  id        Int       @id  @default(autoincrement())
+  coordenada      String
+}
